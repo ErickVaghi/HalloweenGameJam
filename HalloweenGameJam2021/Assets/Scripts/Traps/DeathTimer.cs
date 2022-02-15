@@ -6,6 +6,12 @@ public class DeathTimer : MonoBehaviour
     [SerializeField] private float deathTimeCounter;
     [SerializeField] private float deathTime = 10f;
     [SerializeField] private GameObject player;
+    [SerializeField] private Transform respawn;
+
+    [SerializeField] private TrapTrigger myTrapTrigger;
+
+    [SerializeField] private Rigidbody2D myRigidBody;
+    
     //[SerializeField] private GameObject deathParticles;
     private bool deathAnimation = false;
 
@@ -22,17 +28,27 @@ public class DeathTimer : MonoBehaviour
 
     public void Update()
     {
+        HandeDeath();
+    }
+
+    void HandeDeath()
+    {
         if (!deathAnimation)
         {
             //deathParticles.transform.position = player.transform.position;
             //deathParticles.SetActive(true);
-            Destroy(player);
+            //Destroy(player);
             deathAnimation = true;
         }
         deathTimeCounter -= Time.deltaTime;
-        if (deathTimeCounter < 0)
+        if (deathTimeCounter < 0 && myTrapTrigger.isDead)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            deathTimeCounter = deathTime;
+            player.transform.position = respawn.position;
+            player.GetComponent<SpriteRenderer>().enabled = true;
+            myTrapTrigger.isDead = false;
+            myRigidBody.velocity = Vector2.zero;
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
