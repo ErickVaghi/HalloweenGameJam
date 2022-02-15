@@ -6,6 +6,7 @@ public class DashController : MonoBehaviour
     [SerializeField] private CommandContainer commandContainer;
     [SerializeField] private InputController myInputController;
     [SerializeField] private MoveController myMoveController;
+    [SerializeField] private Collider2D myCollider;
     
     public float dashMoltiplier = 3f;
     
@@ -38,6 +39,7 @@ public class DashController : MonoBehaviour
             verticalVelocityMultiplier = 0;
             dashTimeCounter = dashTime;
             myInputController.enabled = false;
+            myCollider.enabled = false;
             commandContainer.dashCommand = false;
             isDashing = true;
         }
@@ -47,34 +49,11 @@ public class DashController : MonoBehaviour
             if (dashTimeCounter <= 0)
             {
                 myInputController.enabled = true;
+                myCollider.enabled = true;
                 verticalVelocityMultiplier = 1;
                 myMoveController.moveSpeed = originalSpeed;
                 isDashing = false;
             }
         }
     }
-    // void HandleDash()
-    // {
-    //     if (commandContainer.dashCommand && !isDashing)
-    //     {
-    //         tempWalkSpeed = myMoveController.moveSpeed * dashMoltiplier;
-    //         myMoveController.moveSpeed = tempWalkSpeed;
-    //         verticalVelocityMultiplier = 0;
-    //         dashTimeCounter = dashTime;
-    //         myInputController.enabled = false;
-    //         commandContainer.dashCommand = false;
-    //         isDashing = true;
-    //     }
-    //     if (isDashing)
-    //     {
-    //         dashTimeCounter -= Time.deltaTime;
-    //         if (dashTimeCounter <= 0)
-    //         {
-    //             myInputController.enabled = true;
-    //             verticalVelocityMultiplier = 1;
-    //             myMoveController.moveSpeed = originalSpeed;
-    //             isDashing = false;
-    //         }
-    //     }
-    // }
 }

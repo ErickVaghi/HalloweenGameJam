@@ -220,6 +220,7 @@ MonoBehaviour:
   commandContainer: {fileID: 5676424608611245407}
   myInputController: {fileID: 5676424608611245392}
   myMoveController: {fileID: 5676424608611245400}
+  myCollider: {fileID: 5676424608611245402}
   dashMoltiplier: 9
   dashTime: 0.1
   dashTimeCounter: 0
