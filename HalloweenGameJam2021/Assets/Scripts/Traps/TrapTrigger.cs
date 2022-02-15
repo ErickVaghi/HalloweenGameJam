@@ -3,9 +3,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class TrapTrigger : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    [SerializeField] private DeathTimer deathTimer;
+
+    private void Start()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Debug.Log("mort");
+        deathTimer.enabled = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        deathTimer.enabled = true;
     }
 }
