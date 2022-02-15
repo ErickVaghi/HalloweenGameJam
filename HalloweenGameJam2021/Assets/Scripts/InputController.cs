@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour
 {
-    [SerializeField] private ControlContainer myControlContainer;
+    [SerializeField] private CommandContainer myControlContainer;
     
     public bool FlyInput { get; private set; }
     public bool DashInput { get; private set; }
+    
+    public float MoveInput { get; private set; }
     
     void Update()
     {
@@ -15,12 +17,15 @@ public class InputController : MonoBehaviour
 
     void GetInput()
     {
+        MoveInput = Input.GetAxis("Horizontal");
+        
         FlyInput = Input.GetKey(KeyCode.Space);
         DashInput = Input.GetKeyDown(KeyCode.LeftShift);
     }
     void SetCommands()
     {
-        myControlContainer.flyController = FlyInput;
-        myControlContainer.dashController = DashInput;
+        myControlContainer.flyCommand = FlyInput;
+        myControlContainer.dashCommand = DashInput;
+        myControlContainer.moveCommand = MoveInput;
     }
 }
