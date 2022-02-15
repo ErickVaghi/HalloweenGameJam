@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5676424608611245404}
   - component: {fileID: 5676424608611245401}
   - component: {fileID: 5676424608611245400}
+  - component: {fileID: 2918450857046405942}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -171,7 +172,7 @@ MonoBehaviour:
   myControlContainer: {fileID: 5676424608611245407}
   myRigidbody2D: {fileID: 5676424608611245403}
   flyForce: 5
-  maxForce: 3
+  maxForce: 4
 --- !u!114 &5676424608611245401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,7 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallMultiplier: 0.3
-  lowJumpMultiplier: 0.2
+  lowJumpMultiplier: 0.3
   myRigidbody: {fileID: 5676424608611245403}
   myControlContainer: {fileID: 5676424608611245407}
 --- !u!114 &5676424608611245400
@@ -203,3 +204,24 @@ MonoBehaviour:
   myCommandContainer: {fileID: 5676424608611245407}
   myRigidBody2D: {fileID: 5676424608611245403}
   moveSpeed: 5
+--- !u!114 &2918450857046405942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5676424608611245393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5089a84694ee8d64385bf796a52717e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myRigidBody2D: {fileID: 5676424608611245403}
+  commandContainer: {fileID: 5676424608611245407}
+  myInputController: {fileID: 5676424608611245392}
+  myMoveController: {fileID: 5676424608611245400}
+  dashMoltiplier: 9
+  dashTime: 0.1
+  dashTimeCounter: 0
+  isDashing: 0
+  verticalVelocityMultiplier: 1
