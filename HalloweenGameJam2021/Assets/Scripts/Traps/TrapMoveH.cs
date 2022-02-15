@@ -1,18 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TrapMoveH : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Transform pos1;
+    [SerializeField] private Transform pos2;
 
-    // Update is called once per frame
+    [SerializeField] private float speed = 5f;
+
+    private bool turnBack;
     void Update()
     {
-        
+        HandleTrapMovement();
+    }
+
+    void HandleTrapMovement()
+    {
+        if (transform.position.x >= pos1.position.x)
+        {
+            turnBack = true;
+        }
+        if (transform.position.x <= pos2.position.x)
+        {
+            turnBack = false;
+        }
+
+        if (turnBack)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, pos2.position, speed * Time.deltaTime);
+        }
+        else
+        {
+            transform.position = Vector2.MoveTowards(transform.position, pos1.position, speed * Time.deltaTime);
+        }
     }
 }

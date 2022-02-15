@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TrapMoveV : MonoBehaviour
@@ -17,11 +15,11 @@ public class TrapMoveV : MonoBehaviour
 
     void HandleTrapMovement()
     {
-        if (transform.position.x >= pos1.position.x)
+        if (transform.position.y >= pos1.position.y)
         {
             turnBack = true;
         }
-        if (transform.position.x <= pos2.position.x)
+        if (transform.position.y <= pos2.position.y)
         {
             turnBack = false;
         }
