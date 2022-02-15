@@ -10,20 +10,26 @@ public class TrapMoveH : MonoBehaviour
     private bool turnBack;
     void Update()
     {
+        CheckDirection();
         HandleTrapMovement();
     }
 
-    void HandleTrapMovement()
+    void CheckDirection()
     {
-        if (transform.position.x >= pos1.position.x)
+        if (transform.position.x <= pos1.position.x)
         {
             turnBack = true;
+            //Debug.Log(" turn back true");
         }
-        if (transform.position.x <= pos2.position.x)
+        if (transform.position.x >= pos2.position.x)
         {
             turnBack = false;
+            //Debug.Log(" turn back false");
         }
-
+    }
+    
+    void HandleTrapMovement()
+    {
         if (turnBack)
         {
             transform.position = Vector2.MoveTowards(transform.position, pos2.position, speed * Time.deltaTime);

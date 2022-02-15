@@ -18,10 +18,12 @@ public class TrapMoveV : MonoBehaviour
         if (transform.position.y >= pos1.position.y)
         {
             turnBack = true;
+            Debug.Log(" turn back true");
         }
         if (transform.position.y <= pos2.position.y)
         {
             turnBack = false;
+            Debug.Log(" turn back false");
         }
 
         if (turnBack)
