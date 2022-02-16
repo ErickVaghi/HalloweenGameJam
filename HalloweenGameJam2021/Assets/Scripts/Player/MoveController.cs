@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MoveController : MonoBehaviour
 {
+    [SerializeField] private SpriteRenderer mySpriteRenderer;
     [SerializeField] private CommandContainer myCommandContainer;
     [SerializeField] private Rigidbody2D myRigidBody2D;
     public float moveSpeed = 5f;
@@ -12,6 +13,16 @@ public class MoveController : MonoBehaviour
         if (myCommandContainer.moveCommand != 0)
         {
             myRigidBody2D.velocity = new Vector2(moveSpeed * myCommandContainer.moveCommand, myRigidBody2D.velocity.y);
-        }    
+        }
+
+        if (myCommandContainer.moveCommand > 0)
+        {
+            mySpriteRenderer.flipX = true;
+        }
+
+        if (myCommandContainer.moveCommand < 0)
+        {
+            mySpriteRenderer.flipX = false;
+        }
     }
 }

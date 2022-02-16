@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 516c0b33fa2d4ef4bbb8596c511b8659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myLight2D: {fileID: 0}
   deathTimer: {fileID: 3909412109029634877}
   player: {fileID: 0}
   isDead: 0
@@ -162,6 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 547aab2a64d6f3f49b50aee10cfc0acc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myLight2D: {fileID: 0}
   deathTimeCounter: 0
   deathTime: 1
   player: {fileID: 0}

@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
 public class DeathTimer : MonoBehaviour
 {
+    [SerializeField] private Light2D myLight2D;
     [SerializeField] private float deathTimeCounter;
     [SerializeField] private float deathTime = 10f;
     [SerializeField] private GameObject player;
@@ -46,6 +48,7 @@ public class DeathTimer : MonoBehaviour
             deathTimeCounter = deathTime;
             player.transform.position = respawn.position;
             player.GetComponent<SpriteRenderer>().enabled = true;
+            myLight2D.enabled = true;
             myTrapTrigger.isDead = false;
             myRigidBody.velocity = Vector2.zero;
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
