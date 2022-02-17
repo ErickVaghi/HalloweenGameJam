@@ -28,6 +28,7 @@ public class TrapTrigger : MonoBehaviour
         
         /*player.GetComponent<SpriteRenderer>().enabled = false;
         myLight2D.enabled = false;*/
+        
         CameraShake.Instance.ShakeCamera(6f, .8f);
 
         myAnimator.SetTrigger("Dead");

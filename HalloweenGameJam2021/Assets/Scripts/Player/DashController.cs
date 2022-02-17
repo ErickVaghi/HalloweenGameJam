@@ -38,6 +38,7 @@ public class DashController : MonoBehaviour
         if (commandContainer.dashCommand && !isDashing && (myRigidBody2D.velocity.x < -0.5f || myRigidBody2D.velocity.x > 0.5f))
         {
             CameraShake.Instance.ShakeCamera(shakeIntensity, dashTime);
+            
             tempWalkSpeed = myMoveController.moveSpeed * dashMoltiplier;
             myMoveController.moveSpeed = tempWalkSpeed;
             verticalVelocityMultiplier = 0;
