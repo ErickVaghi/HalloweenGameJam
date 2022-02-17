@@ -7,6 +7,7 @@ public class DashController : MonoBehaviour
     [SerializeField] private InputController myInputController;
     [SerializeField] private MoveController myMoveController;
     [SerializeField] private Collider2D myCollider;
+    [SerializeField] private Animator myAnimator;
     
     public float dashMoltiplier = 3f;
     
@@ -42,12 +43,14 @@ public class DashController : MonoBehaviour
             myCollider.enabled = false;
             commandContainer.dashCommand = false;
             isDashing = true;
+            myAnimator.SetTrigger("Dashing");
         }
         if (isDashing)
         {
             dashTimeCounter -= Time.deltaTime;
             if (dashTimeCounter <= 0)
             {
+                myAnimator.ResetTrigger("Dashing");
                 myInputController.enabled = true;
                 myCollider.enabled = true;
                 verticalVelocityMultiplier = 1;
