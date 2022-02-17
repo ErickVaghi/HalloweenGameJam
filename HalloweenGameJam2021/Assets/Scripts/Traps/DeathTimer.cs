@@ -13,6 +13,8 @@ public class DeathTimer : MonoBehaviour
     [SerializeField] private TrapTrigger myTrapTrigger;
 
     [SerializeField] private Rigidbody2D myRigidBody;
+
+    //[SerializeField] private InputController myInputController;
     
     //[SerializeField] private GameObject deathParticles;
     private bool deathAnimation = false;
@@ -42,7 +44,9 @@ public class DeathTimer : MonoBehaviour
             //Destroy(player);
             deathAnimation = true;
         }
+        myRigidBody.velocity = Vector2.zero;
         deathTimeCounter -= Time.deltaTime;
+        //player.transform.position = myTrapTrigger.currentPosition.position;
         if (deathTimeCounter < 0 && myTrapTrigger.isDead)
         {
             deathTimeCounter = deathTime;
@@ -51,6 +55,7 @@ public class DeathTimer : MonoBehaviour
             myLight2D.enabled = true;
             myTrapTrigger.isDead = false;
             myRigidBody.velocity = Vector2.zero;
+            //myInputController.enabled = true;
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
