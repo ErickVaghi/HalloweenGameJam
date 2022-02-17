@@ -1173,6 +1173,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 761e99fe180262d40977bf5288c7628e, type: 2}
+    - target: {fileID: 2918450857046405942, guid: 56f48a8c0dde2b14da720c4182749c23, type: 3}
+      propertyPath: dashTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2918450857046405942, guid: 56f48a8c0dde2b14da720c4182749c23, type: 3}
+      propertyPath: myAnimator
+      value: 
+      objectReference: {fileID: 174057829}
     - target: {fileID: 5676424608611245393, guid: 56f48a8c0dde2b14da720c4182749c23, type: 3}
       propertyPath: m_Name
       value: Player
