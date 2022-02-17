@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9214204635604411236}
   - component: {fileID: 9214204635604411239}
   - component: {fileID: 8272300371529891432}
+  - component: {fileID: 1080412119}
   m_Layer: 0
   m_Name: TrapStill
   m_TagString: Untagged
@@ -119,6 +120,7 @@ MonoBehaviour:
   myLight2D: {fileID: 0}
   deathTimer: {fileID: 9214204635604411239}
   player: {fileID: 0}
+  myAnimator: {fileID: 0}
   isDead: 0
 --- !u!114 &9214204635604411239
 MonoBehaviour:
@@ -134,11 +136,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myLight2D: {fileID: 0}
   deathTimeCounter: 0
-  deathTime: 1
+  deathTime: 0.8
   player: {fileID: 0}
   respawn: {fileID: 0}
   myTrapTrigger: {fileID: 9214204635604411236}
   myRigidBody: {fileID: 0}
+  myAnimator: {fileID: 0}
 --- !u!95 &8272300371529891432
 Animator:
   serializedVersion: 4
@@ -159,3 +162,52 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1080412119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9214204635604411240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.85007143, y: -0.86526024, z: 0}
+  - {x: -1.144155, y: -0.42512354, z: 0}
+  - {x: -1.1694694, y: 0.31406122, z: 0}
+  - {x: -0.8804493, y: 0.8450087, z: 0}
+  - {x: -0.30371237, y: 1.1545041, z: 0}
+  - {x: 0.31902552, y: 1.1545041, z: 0}
+  - {x: 0.32408857, y: 1.0836232, z: 0}
+  - {x: 0.54685664, y: 1.0886862, z: 0}
+  - {x: 0.53673077, y: 1.0178056, z: 0}
+  - {x: 0.6177373, y: 1.0076797, z: 0}
+  - {x: 0.6228001, y: 0.92667323, z: 0}
+  - {x: 0.7848134, y: 0.9216103, z: 0}
+  - {x: 0.77975035, y: 0.8507295, z: 0}
+  - {x: 0.850631, y: 0.85579246, z: 0}
+  - {x: 0.86581993, y: 0.78997463, z: 0}
+  - {x: 0.9215119, y: 0.7646602, z: 0}
+  - {x: 0.93163776, y: 0.6178357, z: 0}
+  - {x: 1.0075812, y: 0.63808733, z: 0}
+  - {x: 1.0126443, y: 0.52164036, z: 0}
+  - {x: 1.0733991, y: 0.53176624, z: 0}
+  - {x: 1.0930912, y: 0.3134032, z: 0}
+  - {x: 1.1594687, y: 0.31406122, z: 0}
+  - {x: 1.1392169, y: -0.49600428, z: 0}
+  - {x: 0.834883, y: -0.880449, z: 0}
+  - {x: 0.4253466, y: -1.1440566, z: 0}
+  - {x: -0.3999071, y: -1.1440567, z: 0}
+  m_ShapePathHash: 2126814747
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -87312

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6187110320025577408}
   - component: {fileID: 6187110320025577409}
   - component: {fileID: 3215019833763603337}
+  - component: {fileID: 1650257354}
   m_Layer: 0
   m_Name: TrapH
   m_TagString: Untagged
@@ -120,6 +121,7 @@ MonoBehaviour:
   myLight2D: {fileID: 0}
   deathTimer: {fileID: 6187110320025577408}
   player: {fileID: 0}
+  myAnimator: {fileID: 0}
   isDead: 0
 --- !u!114 &6187110320025577408
 MonoBehaviour:
@@ -135,11 +137,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myLight2D: {fileID: 0}
   deathTimeCounter: 0
-  deathTime: 1
+  deathTime: 0.8
   player: {fileID: 0}
   respawn: {fileID: 0}
   myTrapTrigger: {fileID: 6187110320025577423}
   myRigidBody: {fileID: 0}
+  myAnimator: {fileID: 0}
 --- !u!114 &6187110320025577409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +178,41 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1650257354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6187110320025577410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.8671479, y: -0.82840455, z: 0}
+  - {x: -1.1298108, y: -0.33788407, z: 0}
+  - {x: -1.1375594, y: 0.40598238, z: 0}
+  - {x: -0.8439021, y: 0.8981421, z: 0}
+  - {x: -0.33170414, y: 1.1343518, z: 0}
+  - {x: 0.27268744, y: 1.149849, z: 0}
+  - {x: 0.8826449, y: 0.8903935, z: 0}
+  - {x: 1.1792753, y: 0.35174203, z: 0}
+  - {x: 1.1715264, y: -0.30688965, z: 0}
+  - {x: 0.8129072, y: -0.8129071, z: 0}
+  - {x: 0.32692766, y: -1.1359907, z: 0}
+  - {x: -0.33945274, y: -1.120494, z: 0}
+  m_ShapePathHash: -2080380917
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -123938
 --- !u!1 &6187110320458791897
 GameObject:
   m_ObjectHideFlags: 0
