@@ -11,7 +11,7 @@ public class TrapTrigger : MonoBehaviour
     [SerializeField] private Animator myAnimator;
     
     //public Transform currentPosition { get; private set; }
-    //[SerializeField] private InputController myInputController;
+    [SerializeField] private InputController myInputController;
 
     public bool isDead;
 
@@ -24,7 +24,7 @@ public class TrapTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         //currentPosition.position = player.transform.position;
-        //myInputController.enabled = false;
+        myInputController.enabled = false;
         
         /*player.GetComponent<SpriteRenderer>().enabled = false;
         myLight2D.enabled = false;*/

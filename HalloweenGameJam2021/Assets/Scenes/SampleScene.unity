@@ -143,6 +143,17 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 174057829, guid: 56f48a8c0dde2b14da720c4182749c23, type: 3}
   m_PrefabInstance: {fileID: 5676424608716223495}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &174057834 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5676424608611245392, guid: 56f48a8c0dde2b14da720c4182749c23, type: 3}
+  m_PrefabInstance: {fileID: 5676424608716223495}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174057814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61da42997da22304ea5a7c9e394cd05d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &206965158
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +186,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.25}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -186,7 +197,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.5}
   m_EdgeRadius: 0
 --- !u!114 &206965160
 MonoBehaviour:
@@ -722,7 +733,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.460757, y: 0.6321504, z: -9.88768}
+  m_LocalPosition: {x: 2.75, y: 0.6321504, z: -9.88768}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1022,7 +1033,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.25}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1033,7 +1044,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.5}
   m_EdgeRadius: 0
 --- !u!114 &682776638
 MonoBehaviour:
@@ -1362,7 +1373,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1306459266}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.460757, y: 0.6321504, z: -9.88768}
+  m_LocalPosition: {x: 2.75, y: 0.6321504, z: -9.88768}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1673,7 +1684,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.25}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1684,7 +1695,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.5}
   m_EdgeRadius: 0
 --- !u!114 &1654582159 stripped
 MonoBehaviour:
@@ -2148,7 +2159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3505268948078200191, guid: 663860d707d8b0744af563d1f1915e5b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.84
+      value: 0.59
       objectReference: {fileID: 0}
     - target: {fileID: 3505268948078200191, guid: 663860d707d8b0744af563d1f1915e5b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2219,6 +2230,10 @@ PrefabInstance:
       propertyPath: myRigidBody
       value: 
       objectReference: {fileID: 174057820}
+    - target: {fileID: 3909412109029634877, guid: df2b8b57ff0a1b84d930bffd4f0e9927, type: 3}
+      propertyPath: myInputController
+      value: 
+      objectReference: {fileID: 174057834}
     - target: {fileID: 3909412109029634878, guid: df2b8b57ff0a1b84d930bffd4f0e9927, type: 3}
       propertyPath: player
       value: 
@@ -2231,6 +2246,10 @@ PrefabInstance:
       propertyPath: myAnimator
       value: 
       objectReference: {fileID: 174057829}
+    - target: {fileID: 3909412109029634878, guid: df2b8b57ff0a1b84d930bffd4f0e9927, type: 3}
+      propertyPath: myInputController
+      value: 
+      objectReference: {fileID: 174057834}
     - target: {fileID: 3909412110499559044, guid: df2b8b57ff0a1b84d930bffd4f0e9927, type: 3}
       propertyPath: m_Name
       value: TrapVertical
@@ -2290,11 +2309,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2918450857046405942, guid: 56f48a8c0dde2b14da720c4182749c23, type: 3}
       propertyPath: shakeIntensity
-      value: 12
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5676424608611245393, guid: 56f48a8c0dde2b14da720c4182749c23, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676424608611245402, guid: 56f48a8c0dde2b14da720c4182749c23, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676424608611245402, guid: 56f48a8c0dde2b14da720c4182749c23, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676424608611245402, guid: 56f48a8c0dde2b14da720c4182749c23, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 5676424608611245405, guid: 56f48a8c0dde2b14da720c4182749c23, type: 3}
       propertyPath: m_RootOrder
@@ -2302,7 +2333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676424608611245405, guid: 56f48a8c0dde2b14da720c4182749c23, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.4307568
+      value: 0.72
       objectReference: {fileID: 0}
     - target: {fileID: 5676424608611245405, guid: 56f48a8c0dde2b14da720c4182749c23, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2373,6 +2404,10 @@ PrefabInstance:
       propertyPath: myRigidBody
       value: 
       objectReference: {fileID: 174057820}
+    - target: {fileID: 6187110320025577408, guid: 7d2101da897a5794885f002f932b3c01, type: 3}
+      propertyPath: myInputController
+      value: 
+      objectReference: {fileID: 174057834}
     - target: {fileID: 6187110320025577423, guid: 7d2101da897a5794885f002f932b3c01, type: 3}
       propertyPath: player
       value: 
@@ -2385,6 +2420,10 @@ PrefabInstance:
       propertyPath: myAnimator
       value: 
       objectReference: {fileID: 174057829}
+    - target: {fileID: 6187110320025577423, guid: 7d2101da897a5794885f002f932b3c01, type: 3}
+      propertyPath: myInputController
+      value: 
+      objectReference: {fileID: 174057834}
     - target: {fileID: 6187110320458791896, guid: 7d2101da897a5794885f002f932b3c01, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2458,6 +2497,10 @@ PrefabInstance:
       propertyPath: myAnimator
       value: 
       objectReference: {fileID: 174057829}
+    - target: {fileID: 9214204635604411236, guid: c49a378c04a7c944494c2baba01ac4ed, type: 3}
+      propertyPath: myInputController
+      value: 
+      objectReference: {fileID: 174057834}
     - target: {fileID: 9214204635604411237, guid: c49a378c04a7c944494c2baba01ac4ed, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -2522,6 +2565,10 @@ PrefabInstance:
       propertyPath: myRigidBody
       value: 
       objectReference: {fileID: 174057820}
+    - target: {fileID: 9214204635604411239, guid: c49a378c04a7c944494c2baba01ac4ed, type: 3}
+      propertyPath: myInputController
+      value: 
+      objectReference: {fileID: 174057834}
     - target: {fileID: 9214204635604411240, guid: c49a378c04a7c944494c2baba01ac4ed, type: 3}
       propertyPath: m_Name
       value: TrapStill

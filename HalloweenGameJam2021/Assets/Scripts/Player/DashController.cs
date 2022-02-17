@@ -8,7 +8,7 @@ public class DashController : MonoBehaviour
     [SerializeField] private MoveController myMoveController;
     [SerializeField] private Collider2D myCollider;
     [SerializeField] private Animator myAnimator;
-    
+
     public float dashMoltiplier = 3f;
 
     [SerializeField] private float shakeIntensity = 2f;
@@ -35,7 +35,7 @@ public class DashController : MonoBehaviour
 
     void HandleDash()
     {
-        if (commandContainer.dashCommand && !isDashing)
+        if (commandContainer.dashCommand && !isDashing && (myRigidBody2D.velocity.x < -0.5f || myRigidBody2D.velocity.x > 0.5f))
         {
             CameraShake.Instance.ShakeCamera(shakeIntensity, dashTime);
             tempWalkSpeed = myMoveController.moveSpeed * dashMoltiplier;

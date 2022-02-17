@@ -27,15 +27,20 @@ public class MoveController : MonoBehaviour
             myRigidBody2D.velocity = new Vector2(moveSpeed * myCommandContainer.moveCommand, myRigidBody2D.velocity.y);
         }
 
+        Vector2 characterScale = transform.localScale;
         if (myCommandContainer.moveCommand > 0)
         {
-            mySpriteRenderer.flipX = true;
+            characterScale.x = -1;
+            //mySpriteRenderer.flipX = true;
         }
 
         if (myCommandContainer.moveCommand < 0)
         {
-            mySpriteRenderer.flipX = false;
+            characterScale.x = 1;
+            //mySpriteRenderer.flipX = false;
         }
+
+        transform.localScale = characterScale;
     }
 
     void turnAnim()

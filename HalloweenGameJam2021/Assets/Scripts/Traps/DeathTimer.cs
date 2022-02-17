@@ -16,7 +16,7 @@ public class DeathTimer : MonoBehaviour
 
     [SerializeField] private Animator myAnimator;
 
-    //[SerializeField] private InputController myInputController;
+    [SerializeField] private InputController myInputController;
     
     //[SerializeField] private GameObject deathParticles;
     //private bool deathAnimation = false;
@@ -53,7 +53,7 @@ public class DeathTimer : MonoBehaviour
             myLight2D.enabled = true;
             myTrapTrigger.isDead = false;
             myRigidBody.velocity = Vector2.zero;
-            //myInputController.enabled = true;
+            myInputController.enabled = true;
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
