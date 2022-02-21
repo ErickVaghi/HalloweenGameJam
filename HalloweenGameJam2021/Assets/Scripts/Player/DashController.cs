@@ -6,7 +6,7 @@ public class DashController : MonoBehaviour
     [SerializeField] private CommandContainer commandContainer;
     [SerializeField] private InputController myInputController;
     [SerializeField] private MoveController myMoveController;
-    [SerializeField] private Collider2D myCollider;
+    //[SerializeField] private Collider2D myCollider;
     [SerializeField] private Animator myAnimator;
 
     public float dashMoltiplier = 3f;
@@ -44,7 +44,7 @@ public class DashController : MonoBehaviour
             verticalVelocityMultiplier = 0;
             dashTimeCounter = dashTime;
             myInputController.enabled = false;
-            myCollider.enabled = false;
+            //myCollider.enabled = false;
             commandContainer.dashCommand = false;
             isDashing = true;
             myAnimator.SetTrigger("Dashing");
@@ -56,7 +56,7 @@ public class DashController : MonoBehaviour
             {
                 myAnimator.ResetTrigger("Dashing");
                 myInputController.enabled = true;
-                myCollider.enabled = true;
+                //myCollider.enabled = true;
                 verticalVelocityMultiplier = 1;
                 myMoveController.moveSpeed = originalSpeed;
                 isDashing = false;
