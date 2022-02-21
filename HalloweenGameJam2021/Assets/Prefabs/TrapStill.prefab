@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9214204635604411236}
   - component: {fileID: 9214204635604411239}
   - component: {fileID: 8272300371529891432}
-  - component: {fileID: 1080412119}
+  - component: {fileID: 1772573105839031798}
   m_Layer: 0
   m_Name: TrapStill
   m_TagString: Untagged
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d7d01b26509b2f84eb50279b55112c6d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7921569, g: 0.654902, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -104,7 +104,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.5
 --- !u!114 &9214204635604411236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,6 +121,7 @@ MonoBehaviour:
   deathTimer: {fileID: 9214204635604411239}
   player: {fileID: 0}
   myAnimator: {fileID: 0}
+  myInputController: {fileID: 0}
   isDead: 0
 --- !u!114 &9214204635604411239
 MonoBehaviour:
@@ -142,6 +143,7 @@ MonoBehaviour:
   myTrapTrigger: {fileID: 9214204635604411236}
   myRigidBody: {fileID: 0}
   myAnimator: {fileID: 0}
+  myInputController: {fileID: 0}
 --- !u!95 &8272300371529891432
 Animator:
   serializedVersion: 4
@@ -162,7 +164,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1080412119
+--- !u!114 &1772573105839031798
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,32 +184,18 @@ MonoBehaviour:
   m_SelfShadows: 0
   m_ApplyToSortingLayers: 00000000
   m_ShapePath:
-  - {x: -0.85007143, y: -0.86526024, z: 0}
-  - {x: -1.144155, y: -0.42512354, z: 0}
-  - {x: -1.1694694, y: 0.31406122, z: 0}
-  - {x: -0.8804493, y: 0.8450087, z: 0}
-  - {x: -0.30371237, y: 1.1545041, z: 0}
-  - {x: 0.31902552, y: 1.1545041, z: 0}
-  - {x: 0.32408857, y: 1.0836232, z: 0}
-  - {x: 0.54685664, y: 1.0886862, z: 0}
-  - {x: 0.53673077, y: 1.0178056, z: 0}
-  - {x: 0.6177373, y: 1.0076797, z: 0}
-  - {x: 0.6228001, y: 0.92667323, z: 0}
-  - {x: 0.7848134, y: 0.9216103, z: 0}
-  - {x: 0.77975035, y: 0.8507295, z: 0}
-  - {x: 0.850631, y: 0.85579246, z: 0}
-  - {x: 0.86581993, y: 0.78997463, z: 0}
-  - {x: 0.9215119, y: 0.7646602, z: 0}
-  - {x: 0.93163776, y: 0.6178357, z: 0}
-  - {x: 1.0075812, y: 0.63808733, z: 0}
-  - {x: 1.0126443, y: 0.52164036, z: 0}
-  - {x: 1.0733991, y: 0.53176624, z: 0}
-  - {x: 1.0930912, y: 0.3134032, z: 0}
-  - {x: 1.1594687, y: 0.31406122, z: 0}
-  - {x: 1.1392169, y: -0.49600428, z: 0}
-  - {x: 0.834883, y: -0.880449, z: 0}
-  - {x: 0.4253466, y: -1.1440566, z: 0}
-  - {x: -0.3999071, y: -1.1440567, z: 0}
-  m_ShapePathHash: 2126814747
+  - {x: -0.3507185, y: -0.33891553, z: 0}
+  - {x: -0.46593714, y: -0.11857706, z: 0}
+  - {x: -0.46888828, y: 0.1292888, z: 0}
+  - {x: -0.35661983, y: 0.35957104, z: 0}
+  - {x: -0.12659693, y: 0.46862894, z: 0}
+  - {x: 0.1330719, y: 0.4715796, z: 0}
+  - {x: 0.36252165, y: 0.33891565, z: 0}
+  - {x: 0.46355963, y: 0.12338728, z: 0}
+  - {x: 0.46355963, y: -0.12742937, z: 0}
+  - {x: 0.32416153, y: -0.35366943, z: 0}
+  - {x: 0.115366936, y: -0.46676952, z: 0}
+  - {x: -0.12069559, y: -0.45791715, z: 0}
+  m_ShapePathHash: 362845177
   m_Mesh: {fileID: 0}
-  m_InstanceId: -87312
+  m_InstanceId: -210980
