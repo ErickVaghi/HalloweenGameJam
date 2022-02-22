@@ -8,7 +8,7 @@ public class DeathTimer : MonoBehaviour
     [SerializeField] private float deathTimeCounter;
     [SerializeField] private float deathTime = 10f;
     [SerializeField] private GameObject player;
-    [SerializeField] private Transform respawn;
+    public Transform respawn;
 
     [SerializeField] private TrapTrigger myTrapTrigger;
 
@@ -17,6 +17,7 @@ public class DeathTimer : MonoBehaviour
     [SerializeField] private Animator myAnimator;
 
     [SerializeField] private InputController myInputController;
+
     
     //[SerializeField] private GameObject deathParticles;
     //private bool deathAnimation = false;

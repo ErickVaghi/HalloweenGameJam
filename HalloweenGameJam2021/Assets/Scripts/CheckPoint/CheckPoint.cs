@@ -5,17 +5,23 @@ using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
 {
-    [SerializeField] private GameObject Animation;
     [SerializeField] private Animator CpAnimation;
+    public bool checkPointActive;
+    public Transform newRespawn;
+    [SerializeField] private DeathTimer myDeathTimer;
 
     private void Awake()
     {
-        //Animation.SetActive(false);
+        newRespawn = gameObject.GetComponent<Transform>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //Animation.SetActive(true);
-        CpAnimation.SetTrigger("Checkpoint");
+        if (!checkPointActive)
+        {
+            CpAnimation.SetTrigger("Checkpoint");
+            checkPointActive = true;
+            myDeathTimer.respawn.position = newRespawn.position;
+        }
     }
 }
