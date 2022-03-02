@@ -15,7 +15,7 @@ public class DashController : MonoBehaviour
     
     [SerializeField] private float dashTime = 5f;
     [SerializeField] private float dashTimeCounter = 0f;
-    [SerializeField] private bool isDashing;
+    public static bool isDashing;
     
     public float verticalVelocityMultiplier = 1f; 
 

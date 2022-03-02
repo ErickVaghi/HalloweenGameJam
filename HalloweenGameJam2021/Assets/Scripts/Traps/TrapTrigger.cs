@@ -23,19 +23,22 @@ public class TrapTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //currentPosition.position = player.transform.position;
-        myInputController.enabled = false;
+        if (!DashController.isDashing)
+        {
+            //currentPosition.position = player.transform.position;
+            myInputController.enabled = false;
         
-        /*player.GetComponent<SpriteRenderer>().enabled = false;
-        myLight2D.enabled = false;*/
+            /*player.GetComponent<SpriteRenderer>().enabled = false;
+            myLight2D.enabled = false;*/
         
-        CameraShake.Instance.ShakeCamera(6f, .8f);
+            CameraShake.Instance.ShakeCamera(6f, .8f);
 
-        myAnimator.SetTrigger("Dead");
-        myAnimator.ResetTrigger("Alive");
-        player.GetComponent<Collider2D>().enabled = false;
-        isDead = true;
-        deathTimer.enabled = true;
+            myAnimator.SetTrigger("Dead");
+            myAnimator.ResetTrigger("Alive");
+            player.GetComponent<Collider2D>().enabled = false;
+            isDead = true;
+            deathTimer.enabled = true;
+        }
     }
 
     private void Update()
