@@ -23,4 +23,8 @@ public class MusicController : MonoBehaviour
         MusicInst.start();
 
     }
+    public void changeMusicProgress(int _val)
+    {
+        MusicInst.setParameterByName("MusicProgress", _val);
+    }
 }
