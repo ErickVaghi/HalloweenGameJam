@@ -20,7 +20,9 @@ public class DashController : MonoBehaviour
     public float verticalVelocityMultiplier = 1f; 
 
     private float originalSpeed;
-    private float tempWalkSpeed; 
+    private float tempWalkSpeed;
+
+    public SoundController sc;
 
     private void Start()
     {
@@ -31,6 +33,7 @@ public class DashController : MonoBehaviour
     private void Update()
     {
         HandleDash();
+        
     }
 
     void HandleDash()
@@ -50,10 +53,11 @@ public class DashController : MonoBehaviour
             myAnimator.SetTrigger("Dashing");
         }
         if (isDashing)
-        {
+        {           
             dashTimeCounter -= Time.deltaTime;
             if (dashTimeCounter <= 0)
             {
+                
                 myAnimator.ResetTrigger("Dashing");
                 myInputController.enabled = true;
                 //myCollider.enabled = true;

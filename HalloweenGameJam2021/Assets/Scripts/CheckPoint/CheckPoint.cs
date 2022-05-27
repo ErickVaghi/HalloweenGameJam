@@ -10,6 +10,8 @@ public class CheckPoint : MonoBehaviour
     public Transform newRespawn;
     [SerializeField] private DeathTimer myDeathTimer;
 
+    public SoundController sc;
+
     private void Awake()
     {
         newRespawn = gameObject.GetComponent<Transform>();
@@ -22,6 +24,7 @@ public class CheckPoint : MonoBehaviour
             CpAnimation.SetTrigger("Checkpoint");
             checkPointActive = true;
             myDeathTimer.respawn.position = newRespawn.position;
+            sc.ChekpointAudio();
         }
     }
 }
