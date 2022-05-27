@@ -18,9 +18,10 @@ public class DeathTimer : MonoBehaviour
 
     [SerializeField] private InputController myInputController;
 
-    
+
     //[SerializeField] private GameObject deathParticles;
     //private bool deathAnimation = false;
+
 
     private void Awake()
     {

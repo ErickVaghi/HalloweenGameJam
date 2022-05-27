@@ -8,8 +8,11 @@ public class SoundController : MonoBehaviour
     public FMODUnity.EventReference CheckpointRef;
     private FMOD.Studio.EventInstance CheckpointInst;
 
-    public FMODUnity.EventReference Dashref;
+    public FMODUnity.EventReference DashRef;
     private FMOD.Studio.EventInstance DashInst;
+
+    public FMODUnity.EventReference DeathRef;
+    private FMOD.Studio.EventInstance DeathInst;
 
     // Start is called before the first frame update
     void Start()
@@ -24,9 +27,16 @@ public class SoundController : MonoBehaviour
     }
     public void DashAudio()
     {
-        DashInst = FMODUnity.RuntimeManager.CreateInstance(Dashref);
+        DashInst = FMODUnity.RuntimeManager.CreateInstance(DashRef);
         DashInst.start();
         DashInst.release();
+
+    }
+    public void DeathAudio()
+    {
+        DeathInst = FMODUnity.RuntimeManager.CreateInstance(DeathRef);
+        DeathInst.start();
+        DeathInst.release();
 
     }
 }
