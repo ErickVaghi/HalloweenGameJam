@@ -27,6 +27,10 @@ public class TrapAudio : MonoBehaviour
             TrapInst.start();
             Debug.Log("StartTrapSound");
         }
+        else
+        {
+
+        }
 
 
     }

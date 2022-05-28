@@ -50,6 +50,7 @@ public class DashController : MonoBehaviour
             //myCollider.enabled = false;
             commandContainer.dashCommand = false;
             isDashing = true;
+            sc.DashAudio();
             myAnimator.SetTrigger("Dashing");
         }
         if (isDashing)

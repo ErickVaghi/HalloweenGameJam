@@ -8,7 +8,15 @@ public class MusicProgress : MonoBehaviour
     public int ProgressLvl = 1;
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        mc.changeMusicProgress(ProgressLvl);
+        if(collision.tag == ("Player"))
+        {
+            Debug.Log("MusicProgress");
+            mc.changeMusicProgress(ProgressLvl);
+        }
+        else
+        {
+
+        }
     }
 
 }
