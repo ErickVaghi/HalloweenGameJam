@@ -6,10 +6,12 @@ public class TrapAudio : MonoBehaviour
 {
     public FMODUnity.EventReference TrapRef;
     private FMOD.Studio.EventInstance TrapInst;
+    FMOD.Studio.PLAYBACK_STATE pbState;
 
     void Start()
     {
-
+        TrapInst = FMODUnity.RuntimeManager.CreateInstance(TrapRef);
+        TrapInst.getPlaybackState(out pbState);
     }
 
     // Update is called once per frame
@@ -19,9 +21,13 @@ public class TrapAudio : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        TrapInst = FMODUnity.RuntimeManager.CreateInstance(TrapRef);
-        TrapInst.start();
-        Debug.Log("StartTrapSound");
+
+        if (collision.tag == ("Player") && pbState != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+        {
+            TrapInst.start();
+            Debug.Log("StartTrapSound");
+        }
+
 
     }
     public void OnTriggerExit2D(Collider2D collision)
