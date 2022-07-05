@@ -14,6 +14,9 @@ public class SoundController : MonoBehaviour
     public FMODUnity.EventReference DeathRef;
     private FMOD.Studio.EventInstance DeathInst;
 
+    public FMODUnity.EventReference PickupCardRef;
+    private FMOD.Studio.EventInstance PickupCardInst;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +40,12 @@ public class SoundController : MonoBehaviour
         DeathInst = FMODUnity.RuntimeManager.CreateInstance(DeathRef);
         DeathInst.start();
         DeathInst.release();
+    }
+    public void CardCollectAudio()
+    {
+        PickupCardInst = FMODUnity.RuntimeManager.CreateInstance(PickupCardRef);
+        PickupCardInst.start();
+        PickupCardInst.release();
 
     }
 }
