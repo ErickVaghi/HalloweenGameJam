@@ -17,6 +17,9 @@ public class DeathTimer : MonoBehaviour
     [SerializeField] private InputController playerInputController;
     [SerializeField] private Rigidbody2D playerRigidBody;
     [SerializeField] private Animator playerAnimator;
+
+    [Header("UI")]
+    [SerializeField] private Animator transition;
     
     [Header("Respawn")]
     public Transform respawn;
@@ -26,14 +29,20 @@ public class DeathTimer : MonoBehaviour
     
     private void Awake()
     {
+        //Connect Trap Components
         myLight2D = this.GetComponentInChildren<Light2D>();
         myTrapTrigger = this.GetComponent<TrapTrigger>();
         
+        //Connect Player Object and components
         player = GameObject.FindGameObjectWithTag("Player");
         playerInputController = player.GetComponent<InputController>();
         playerAnimator = player.GetComponent<Animator>();
         playerRigidBody = player.GetComponent<Rigidbody2D>();
-
+        
+        //Connect transition component
+        transition = GameObject.FindGameObjectWithTag("Transition").GetComponent<Animator>();
+        
+        //Connect Checkpoint Object
         respawn = GameObject.FindGameObjectWithTag("CheckPoint").GetComponent<Transform>();
 
         //deathParticles.SetActive(false);
@@ -59,6 +68,8 @@ public class DeathTimer : MonoBehaviour
         {
             playerAnimator.ResetTrigger("Dead");
             playerAnimator.SetTrigger("Alive");
+            
+            transition.SetTrigger("Transition");
             
             deathTimeCounter = deathTime;
             player.transform.position = respawn.position;
