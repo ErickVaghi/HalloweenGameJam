@@ -69,7 +69,7 @@ public class DeathTimer : MonoBehaviour
             playerAnimator.ResetTrigger("Dead");
             playerAnimator.SetTrigger("Alive");
             
-            transition.SetTrigger("Transition");
+            transition.ResetTrigger("Transition");
             
             deathTimeCounter = deathTime;
             player.transform.position = respawn.position;

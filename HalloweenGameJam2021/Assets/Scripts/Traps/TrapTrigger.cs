@@ -14,6 +14,9 @@ public class TrapTrigger : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private CommandContainer commandContainer;
+    
+    [Header("UI")]
+    [SerializeField] private Animator transition;
 
     [Header("-")]
     public bool isDead;
@@ -24,6 +27,9 @@ public class TrapTrigger : MonoBehaviour
         playerAnimator = player.GetComponent<Animator>();
         myInputController = player.GetComponent<InputController>();
         commandContainer = player.GetComponent<CommandContainer>();
+        
+        //Connect transition component
+        transition = GameObject.FindGameObjectWithTag("Transition").GetComponent<Animator>();
         
         deathTimer = this.GetComponent<DeathTimer>();
         myLight2D = this.GetComponentInChildren<Light2D>();
@@ -51,6 +57,9 @@ public class TrapTrigger : MonoBehaviour
 
             playerAnimator.SetTrigger("Dead");
             playerAnimator.ResetTrigger("Alive");
+            
+            transition.SetTrigger("Transition");
+            
             player.GetComponent<Collider2D>().enabled = false;
             isDead = true;
             deathTimer.enabled = true;
