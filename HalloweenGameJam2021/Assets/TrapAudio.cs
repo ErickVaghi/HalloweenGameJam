@@ -12,6 +12,7 @@ public class TrapAudio : MonoBehaviour
     {
         TrapInst = FMODUnity.RuntimeManager.CreateInstance(TrapRef);
         TrapInst.getPlaybackState(out pbState);
+        TrapInst.start();
     }
 
     // Update is called once per frame
@@ -24,7 +25,7 @@ public class TrapAudio : MonoBehaviour
 
         if (collision.tag == ("Player") && pbState != FMOD.Studio.PLAYBACK_STATE.PLAYING)
         {
-            TrapInst.start();
+            //TrapInst.start();
             Debug.Log("StartTrapSound");
         }
         else
