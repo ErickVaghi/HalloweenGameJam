@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 3909412109029634876}
   - component: {fileID: 8399538973762795741}
   - component: {fileID: 2071966334}
+  - component: {fileID: 2235378423878098551}
   m_Layer: 0
   m_Name: TrapV
   m_TagString: Untagged
@@ -350,6 +351,7 @@ MonoBehaviour:
   player: {fileID: 0}
   playerAnimator: {fileID: 0}
   commandContainer: {fileID: 0}
+  transition: {fileID: 0}
   isDead: 0
 --- !u!114 &3909412109029634877
 MonoBehaviour:
@@ -371,7 +373,9 @@ MonoBehaviour:
   playerInputController: {fileID: 0}
   playerRigidBody: {fileID: 0}
   playerAnimator: {fileID: 0}
+  transition: {fileID: 0}
   respawn: {fileID: 0}
+  sc: {fileID: 0}
 --- !u!114 &3909412109029634876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,7 +445,26 @@ MonoBehaviour:
   - {x: -0.10566425, y: -0.49523973, z: 0}
   m_ShapePathHash: 1566663701
   m_Mesh: {fileID: 0}
-  m_InstanceId: 58854
+  m_InstanceId: 152190
+--- !u!114 &2235378423878098551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3909412109029634866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09ccb61a492763c4c80ae791eb768e6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TrapRef:
+    Guid:
+      Data1: -1991545991
+      Data2: 1184227020
+      Data3: -395232126
+      Data4: 1644599373
+    Path: event:/TrapLoop
 --- !u!1 &3909412110165203308
 GameObject:
   m_ObjectHideFlags: 0

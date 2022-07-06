@@ -8,8 +8,8 @@ public class SoundController : MonoBehaviour
     public FMODUnity.EventReference CheckpointRef;
     private FMOD.Studio.EventInstance CheckpointInst;
 
-    public FMODUnity.EventReference DashRef;
-    private FMOD.Studio.EventInstance DashInst;
+    //public FMODUnity.EventReference DashRef;
+    //private FMOD.Studio.EventInstance DashInst;
 
     public FMODUnity.EventReference DeathRef;
     private FMOD.Studio.EventInstance DeathInst;
@@ -32,13 +32,13 @@ public class SoundController : MonoBehaviour
         CheckpointInst.start();
         CheckpointInst.release();
     }
-    public void DashAudio()
-    {
-        DashInst = FMODUnity.RuntimeManager.CreateInstance(DashRef);
-        DashInst.start();
-        DashInst.release();
+    //public void DashAudio()
+    //{
+        //DashInst = FMODUnity.RuntimeManager.CreateInstance(DashRef);
+       // DashInst.start();
+       // DashInst.release();
 
-    }
+    //}
     public void DeathAudio()
     {
         DeathInst = FMODUnity.RuntimeManager.CreateInstance(DeathRef);

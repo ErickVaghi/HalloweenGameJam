@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 6187110320025577409}
   - component: {fileID: 3215019833763603337}
   - component: {fileID: 1650257354}
+  - component: {fileID: 7065399115085296065}
   m_Layer: 0
   m_Name: TrapH
   m_TagString: Untagged
@@ -205,9 +206,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myLight2D: {fileID: 0}
   deathTimer: {fileID: 6187110320025577408}
-  player: {fileID: 0}
-  myAnimator: {fileID: 0}
   myInputController: {fileID: 0}
+  player: {fileID: 0}
+  playerAnimator: {fileID: 0}
+  commandContainer: {fileID: 0}
+  transition: {fileID: 0}
   isDead: 0
 --- !u!114 &6187110320025577408
 MonoBehaviour:
@@ -222,14 +225,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myLight2D: {fileID: 0}
+  myTrapTrigger: {fileID: 6187110320025577423}
   deathTimeCounter: 0
   deathTime: 0.8
   player: {fileID: 0}
+  playerInputController: {fileID: 0}
+  playerRigidBody: {fileID: 0}
+  playerAnimator: {fileID: 0}
+  transition: {fileID: 0}
   respawn: {fileID: 0}
-  myTrapTrigger: {fileID: 6187110320025577423}
-  myRigidBody: {fileID: 0}
-  myAnimator: {fileID: 0}
-  myInputController: {fileID: 0}
+  sc: {fileID: 0}
 --- !u!114 &6187110320025577409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,7 +304,26 @@ MonoBehaviour:
   - {x: -0.26770592, y: -0.37911153, z: 0}
   m_ShapePathHash: -1970202379
   m_Mesh: {fileID: 0}
-  m_InstanceId: 39382
+  m_InstanceId: 152374
+--- !u!114 &7065399115085296065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6187110320025577410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09ccb61a492763c4c80ae791eb768e6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TrapRef:
+    Guid:
+      Data1: -1991545991
+      Data2: 1184227020
+      Data3: -395232126
+      Data4: 1644599373
+    Path: event:/TrapLoop
 --- !u!1 &6187110320458791897
 GameObject:
   m_ObjectHideFlags: 0

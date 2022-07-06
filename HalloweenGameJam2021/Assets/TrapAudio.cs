@@ -20,25 +20,25 @@ public class TrapAudio : MonoBehaviour
     {
         TrapInst.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
     }
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
+    //public void OnTriggerEnter2D(Collider2D collision)
+    //{
 
-        if (collision.tag == ("Player") && pbState != FMOD.Studio.PLAYBACK_STATE.PLAYING)
-        {
+        //if (collision.tag == ("Player") && pbState != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+        //{
             //TrapInst.start();
-            Debug.Log("StartTrapSound");
-        }
-        else
-        {
+            //Debug.Log("StartTrapSound");
+        //}
+        //else
+        //{
 
-        }
+       // }
 
 
-    }
-    public void OnTriggerExit2D(Collider2D collision)
-    {
+   // }
+    //public void OnTriggerExit2D(Collider2D collision)
+    //{
         //TrapInst.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         //TrapInst.release();
-        Debug.Log("StopTrapSound");
-    }
+        //Debug.Log("StopTrapSound");
+   // }
 }

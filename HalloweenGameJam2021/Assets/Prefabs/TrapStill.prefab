@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 9214204635604411239}
   - component: {fileID: 8272300371529891432}
   - component: {fileID: 1772573105839031798}
+  - component: {fileID: 8111831230123051941}
   m_Layer: 0
   m_Name: TrapStill
   m_TagString: Untagged
@@ -258,6 +259,7 @@ MonoBehaviour:
   playerAnimator: {fileID: 0}
   transition: {fileID: 0}
   respawn: {fileID: 0}
+  sc: {fileID: 0}
 --- !u!95 &8272300371529891432
 Animator:
   serializedVersion: 4
@@ -312,4 +314,23 @@ MonoBehaviour:
   - {x: -0.12069559, y: -0.45791715, z: 0}
   m_ShapePathHash: 362845177
   m_Mesh: {fileID: 0}
-  m_InstanceId: 31160
+  m_InstanceId: 152502
+--- !u!114 &8111831230123051941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9214204635604411240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09ccb61a492763c4c80ae791eb768e6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TrapRef:
+    Guid:
+      Data1: -1991545991
+      Data2: 1184227020
+      Data3: -395232126
+      Data4: 1644599373
+    Path: event:/TrapLoop
