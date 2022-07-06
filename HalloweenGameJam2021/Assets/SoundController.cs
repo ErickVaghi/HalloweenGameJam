@@ -17,6 +17,10 @@ public class SoundController : MonoBehaviour
     public FMODUnity.EventReference PickupCardRef;
     private FMOD.Studio.EventInstance PickupCardInst;
 
+    public FMODUnity.EventReference ReviveRef;
+    private FMOD.Studio.EventInstance ReviveInst;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,5 +51,11 @@ public class SoundController : MonoBehaviour
         PickupCardInst.start();
         PickupCardInst.release();
 
+    }
+    public void ReviveAudio()
+    {
+        ReviveInst = FMODUnity.RuntimeManager.CreateInstance(ReviveRef);
+        ReviveInst.start();
+        ReviveInst.release();
     }
 }

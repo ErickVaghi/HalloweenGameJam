@@ -23,6 +23,8 @@ public class DeathTimer : MonoBehaviour
     
     [Header("Respawn")]
     public Transform respawn;
+
+    public SoundController sc;
     
     //[SerializeField] private GameObject deathParticles;
     //private bool deathAnimation = false;
@@ -66,6 +68,7 @@ public class DeathTimer : MonoBehaviour
         //player.transform.position = myTrapTrigger.currentPosition.position;
         if (deathTimeCounter < 0 && myTrapTrigger.isDead)
         {
+            
             playerAnimator.ResetTrigger("Dead");
             playerAnimator.SetTrigger("Alive");
             
