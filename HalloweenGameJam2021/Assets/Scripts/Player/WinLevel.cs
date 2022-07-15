@@ -9,8 +9,8 @@ using UnityEngine.SceneManagement;
 public class WinLevel : MonoBehaviour
 {
     public static int cardCounter = 0;
-    [SerializeField] private int count;
-    [SerializeField] private int cardsToWin = 3;
+    public static int count;
+    public static int cardsToWin = 3;
 
     private void Update()
     {
