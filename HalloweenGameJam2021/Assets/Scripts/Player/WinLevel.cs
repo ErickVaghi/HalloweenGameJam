@@ -1,20 +1,27 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
 public class WinLevel : MonoBehaviour
 {
-    public static int cardCounter = 0;
-    public static int count;
-    public static int cardsToWin = 3;
+    [SerializeField] public static int cardCounter = 0;
+    [SerializeField] public static int count;
+    [SerializeField] private int MaxCards = 3;
+    [SerializeField] public static int cardsToWin;
     [SerializeField] private Animator sceneTransition;
 
     private void Awake()
     {
         sceneTransition = GameObject.FindWithTag("Scene_Transition").GetComponent<Animator>();
+    }
+
+    private void Start()
+    {
+        cardCounter = 0;
+        count = 0;
+        cardsToWin = MaxCards;
     }
 
     private void Update()
