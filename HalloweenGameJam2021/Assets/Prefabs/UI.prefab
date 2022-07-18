@@ -395,9 +395,10 @@ GameObject:
   - component: {fileID: 632655805613206776}
   - component: {fileID: 6091683179349015577}
   - component: {fileID: 2309067722230895113}
+  - component: {fileID: 6248408906946215929}
   m_Layer: 5
   m_Name: Scene_Transition
-  m_TagString: Transition
+  m_TagString: Scene_Transition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -490,6 +491,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fb52ddcb62cd43408af9589b6d8da9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6248408906946215929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698737755022242194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15d9563405373c4499eba2cd7539992c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4241097420532727388
