@@ -11,6 +11,8 @@ public class DashController : MonoBehaviour
 
     public float dashMoltiplier = 3f;
 
+    //[SerializeField] private float dashSpeed = 24f;
+
     [SerializeField] private float shakeIntensity = 2f;
     
     [SerializeField] private float dashTime = 5f;
@@ -43,6 +45,7 @@ public class DashController : MonoBehaviour
             CameraShake.Instance.ShakeCamera(shakeIntensity, dashTime);
             
             tempWalkSpeed = myMoveController.moveSpeed * dashMoltiplier;
+            //tempWalkSpeed = dashSpeed;
             myMoveController.moveSpeed = tempWalkSpeed;
             verticalVelocityMultiplier = 0;
             dashTimeCounter = dashTime;
