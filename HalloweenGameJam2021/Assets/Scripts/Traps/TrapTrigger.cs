@@ -41,7 +41,7 @@ public class TrapTrigger : MonoBehaviour
         deathTimer.enabled = false;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (!DashController.isDashing)
         {
