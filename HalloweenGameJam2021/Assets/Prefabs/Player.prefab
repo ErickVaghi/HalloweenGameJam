@@ -549,8 +549,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myControlContainer: {fileID: 5676424608611245407}
   myRigidbody2D: {fileID: 5676424608611245403}
-  flyForce: 3
-  maxForce: 4
+  flyForce: 2
+  maxForce: 3
 --- !u!114 &5676424608611245401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -642,4 +642,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f216fe43682734cb472bfd438461ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardCounter: 0
+  MaxCards: 3
+  sceneTransition: {fileID: 0}
