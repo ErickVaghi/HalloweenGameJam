@@ -15,6 +15,7 @@ public class CheckPoint : MonoBehaviour
     private void Awake()
     {
         newRespawn = gameObject.GetComponent<Transform>();
+        myDeathTimer = GameObject.FindWithTag("Trap").GetComponent<DeathTimer>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)

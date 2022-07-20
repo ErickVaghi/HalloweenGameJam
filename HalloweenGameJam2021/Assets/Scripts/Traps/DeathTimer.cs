@@ -24,6 +24,7 @@ public class DeathTimer : MonoBehaviour
     [Header("Respawn")]
     public Transform respawn;
 
+    [Header("Sound")]
     public SoundController sc;
     
     //[SerializeField] private GameObject deathParticles;
