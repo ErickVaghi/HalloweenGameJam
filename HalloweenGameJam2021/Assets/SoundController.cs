@@ -20,6 +20,9 @@ public class SoundController : MonoBehaviour
     public FMODUnity.EventReference ReviveRef;
     private FMOD.Studio.EventInstance ReviveInst;
 
+    public FMODUnity.EventReference PauseAudioRef;
+    private FMOD.Studio.EventInstance PauseAudioInst;
+
 
     // Start is called before the first frame update
     void Start()
@@ -57,5 +60,14 @@ public class SoundController : MonoBehaviour
         ReviveInst = FMODUnity.RuntimeManager.CreateInstance(ReviveRef);
         ReviveInst.start();
         ReviveInst.release();
+    }
+    public void PauseAudio()
+    {
+        PauseAudioInst = FMODUnity.RuntimeManager.CreateInstance(PauseAudioRef);
+        PauseAudioInst.start();
+    }
+    public void PauseAudioStop()
+    {
+        PauseAudioInst.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 }

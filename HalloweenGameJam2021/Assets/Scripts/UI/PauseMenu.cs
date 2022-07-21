@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
+    public SoundController sc;
 
     public static bool GameIsPaused = false;
     [SerializeField] private GameObject PauseGameUI;
@@ -35,6 +36,7 @@ public class PauseMenu : MonoBehaviour
         PauseGameUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        sc.PauseAudioStop();
     }
 
     public void Pause()
@@ -43,6 +45,7 @@ public class PauseMenu : MonoBehaviour
         PauseGameUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+        sc.PauseAudio();
     }
 
     public void Quit()
