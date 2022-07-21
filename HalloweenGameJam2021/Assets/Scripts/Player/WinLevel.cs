@@ -8,12 +8,15 @@ public class WinLevel : MonoBehaviour
 {
     [SerializeField] public static int cardCounter = 0;
     [SerializeField] public static int count;
-    [SerializeField] private int MaxCards = 3;
+    [SerializeField] private int MaxCards;
     [SerializeField] public static int cardsToWin;
     [SerializeField] private Animator sceneTransition;
 
     private void Awake()
     {
+        cardCounter = 0;
+        count = 0;
+        cardsToWin = 0;
         sceneTransition = GameObject.FindWithTag("Scene_Transition").GetComponent<Animator>();
     }
 
@@ -21,6 +24,7 @@ public class WinLevel : MonoBehaviour
     {
         cardCounter = 0;
         count = 0;
+        cardsToWin = 0;
         cardsToWin = MaxCards;
     }
 
