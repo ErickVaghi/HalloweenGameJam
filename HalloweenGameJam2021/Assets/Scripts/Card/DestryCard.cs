@@ -18,6 +18,7 @@ public class DestryCard : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Destroy(this.GetComponentInChildren<Collider2D>());
             card.SetTrigger("Collected");
             //Destroy(other.gameObject);
             Destroy(this.GetComponentInChildren<Light2D>());
