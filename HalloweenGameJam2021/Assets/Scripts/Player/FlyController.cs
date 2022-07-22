@@ -7,11 +7,11 @@ public class FlyController : MonoBehaviour
     [SerializeField] private float flyForce = 5f;
     [SerializeField] private float maxForce = 20f;
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (myControlContainer.flyCommand && myRigidbody2D.velocity.y <= maxForce)
         {
-            myRigidbody2D.AddForce(Vector2.up*flyForce);
+            myRigidbody2D.AddForce((Vector2.up*flyForce) * Time.deltaTime);
         }
     }
 }

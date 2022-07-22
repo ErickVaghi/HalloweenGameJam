@@ -19,12 +19,12 @@ public class MoveController : MonoBehaviour
         lastInput = true;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         //turnAnim();
         if (myCommandContainer.moveCommand != 0)
         {
-            myRigidBody2D.velocity = new Vector2(moveSpeed * myCommandContainer.moveCommand, myRigidBody2D.velocity.y);
+            myRigidBody2D.velocity = new Vector2((moveSpeed * Time.deltaTime) * myCommandContainer.moveCommand, myRigidBody2D.velocity.y);
         }
 
         Vector2 characterScale = transform.localScale;
