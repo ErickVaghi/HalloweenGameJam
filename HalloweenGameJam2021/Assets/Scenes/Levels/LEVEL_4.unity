@@ -2097,15 +2097,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676424608611245400, guid: 56f48a8c0dde2b14da720c4182749c23, type: 3}
       propertyPath: moveSpeed
-      value: 150
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 5676424608611245404, guid: 56f48a8c0dde2b14da720c4182749c23, type: 3}
       propertyPath: flyForce
-      value: 700
+      value: 850
       objectReference: {fileID: 0}
     - target: {fileID: 5676424608611245404, guid: 56f48a8c0dde2b14da720c4182749c23, type: 3}
       propertyPath: maxForce
-      value: 720
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5676424608611245405, guid: 56f48a8c0dde2b14da720c4182749c23, type: 3}
       propertyPath: m_RootOrder

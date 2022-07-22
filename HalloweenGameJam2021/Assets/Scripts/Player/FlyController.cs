@@ -11,7 +11,10 @@ public class FlyController : MonoBehaviour
     {
         if (myControlContainer.flyCommand && myRigidbody2D.velocity.y <= maxForce)
         {
+            gameObject.GetComponent<Rigidbody2D>().gravityScale = 0.5f;
             myRigidbody2D.AddForce((Vector2.up*flyForce) * Time.deltaTime);
         }
+        else
+            gameObject.GetComponent<Rigidbody2D>().gravityScale = 1.1f;
     }
 }
