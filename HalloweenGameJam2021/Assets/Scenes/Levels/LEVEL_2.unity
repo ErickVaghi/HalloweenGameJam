@@ -12278,6 +12278,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -4.47
       objectReference: {fileID: 0}
+    - target: {fileID: 6484403838461790861, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
+      propertyPath: PauseAudioRef.Path
+      value: snapshot:/PausemenuFilter
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484403838461790861, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
+      propertyPath: PauseAudioRef.Guid.Data1
+      value: -1041908284
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484403838461790861, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
+      propertyPath: PauseAudioRef.Guid.Data2
+      value: 1084262024
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484403838461790861, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
+      propertyPath: PauseAudioRef.Guid.Data3
+      value: 523188360
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484403838461790861, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
+      propertyPath: PauseAudioRef.Guid.Data4
+      value: -918230199
+      objectReference: {fileID: 0}
     - target: {fileID: 7893974134078559500, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: m_LocalPosition.x
       value: -70.2
