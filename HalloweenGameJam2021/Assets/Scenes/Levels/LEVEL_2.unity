@@ -12272,11 +12272,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6480960335831115887, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.24
+      value: -32.21
       objectReference: {fileID: 0}
     - target: {fileID: 6480960335831115887, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.47
+      value: -9.26
       objectReference: {fileID: 0}
     - target: {fileID: 6484403838461790861, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: PauseAudioRef.Path
