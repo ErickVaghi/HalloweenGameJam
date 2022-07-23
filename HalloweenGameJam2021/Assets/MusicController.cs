@@ -6,7 +6,7 @@ public class MusicController : MonoBehaviour
 {
     public FMODUnity.EventReference MusicRef;
     private FMOD.Studio.EventInstance MusicInst;
-    private FMOD.Studio.PLAYBACK_STATE pbState;
+    FMOD.Studio.PLAYBACK_STATE pbState;
 
     void Start()
     {
