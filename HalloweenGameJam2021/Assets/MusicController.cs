@@ -11,27 +11,33 @@ public class MusicController : MonoBehaviour
     void Start()
     {
         MusicInst = FMODUnity.RuntimeManager.CreateInstance(MusicRef);
-
+        playMusic();
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
-        MusicInst.getPlaybackState(out pbState);
-        if (pbState != FMOD.Studio.PLAYBACK_STATE.PLAYING)
-        {
+        //MusicInst.getPlaybackState(out pbState);
+        //if (pbState != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+       // {
 
-            MusicInst.start();
-        }
-        else
-        {
+           // MusicInst.start();
+       // }
+       // else
+       // {
 
 
-        }
+       // }
     }
 
     public void changeMusicProgress(int _val)
     {
         MusicInst.setParameterByName("MusicProgress", _val);
+    }
+    public void playMusic()
+    {
+        MusicInst.start();
+
     }
 }
