@@ -12268,15 +12268,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6480960335831115887, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: m_LocalScale.x
-      value: 6.9375
+      value: 1.9078126
       objectReference: {fileID: 0}
     - target: {fileID: 6480960335831115887, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.21
+      value: -16.55
       objectReference: {fileID: 0}
     - target: {fileID: 6480960335831115887, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.26
+      value: -3.63
       objectReference: {fileID: 0}
     - target: {fileID: 6484403838461790861, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: PauseAudioRef.Path

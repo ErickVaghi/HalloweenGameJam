@@ -19075,6 +19075,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7059082456343288572, guid: 0b55df4b078416344be184b05323be6f, type: 3}
   m_PrefabInstance: {fileID: 1097731545}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1099321359 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6484403838461790861, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
+  m_PrefabInstance: {fileID: 1119388369}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34049cdb0f63c0428475a1e0c6ecd51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1104854955 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3505268948078200191, guid: 663860d707d8b0744af563d1f1915e5b, type: 3}
@@ -19147,11 +19158,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 403957718216575439, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -55.7
+      value: 6.41
       objectReference: {fileID: 0}
     - target: {fileID: 403957718216575439, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.3
+      value: -4.3
       objectReference: {fileID: 0}
     - target: {fileID: 2430737984502954466, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: m_LocalScale.x
@@ -19159,11 +19170,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2430737984502954466, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.9
+      value: -15.84
       objectReference: {fileID: 0}
     - target: {fileID: 2430737984502954466, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.5
+      value: -7.78
       objectReference: {fileID: 0}
     - target: {fileID: 5455130603299255274, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: m_Name
@@ -19214,16 +19225,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6064366306598951481, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064366306598951481, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: m_LocalScale.y
-      value: 8.618438
+      value: 1.2927656
       objectReference: {fileID: 0}
     - target: {fileID: 6064366306598951481, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.35
+      value: -39.88
       objectReference: {fileID: 0}
     - target: {fileID: 6064366306598951481, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5
+      value: -7.67
       objectReference: {fileID: 0}
     - target: {fileID: 6480960335831115887, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: m_LocalScale.x
@@ -19231,15 +19246,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6480960335831115887, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -38.7
+      value: -33.67
       objectReference: {fileID: 0}
     - target: {fileID: 6480960335831115887, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.47
+      value: -11.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484403838461790861, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
+      propertyPath: PauseAudioRef.Path
+      value: snapshot:/PausemenuFilter
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484403838461790861, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
+      propertyPath: PauseAudioRef.Guid.Data1
+      value: -1041908284
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484403838461790861, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
+      propertyPath: PauseAudioRef.Guid.Data2
+      value: 1084262024
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484403838461790861, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
+      propertyPath: PauseAudioRef.Guid.Data3
+      value: 523188360
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484403838461790861, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
+      propertyPath: PauseAudioRef.Guid.Data4
+      value: -918230199
       objectReference: {fileID: 0}
     - target: {fileID: 7893974134078559500, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -70.2
+      value: 19.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 7893974134078559500, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
@@ -22695,11 +22734,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7492222160320036556, guid: 3aec7bdfd8f60df47a84f39a13b10e9c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.412892
+      value: -1.9538708
       objectReference: {fileID: 0}
     - target: {fileID: 7492222160320036556, guid: 3aec7bdfd8f60df47a84f39a13b10e9c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.2906318
+      value: 1.3267784
       objectReference: {fileID: 0}
     - target: {fileID: 7492222160320036557, guid: 3aec7bdfd8f60df47a84f39a13b10e9c, type: 3}
       propertyPath: m_Enabled
@@ -25334,6 +25373,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1463987950}
     m_Modifications:
+    - target: {fileID: 1065876562, guid: ec98f932d9bc20743b67fd5e3e0c5008, type: 3}
+      propertyPath: sc
+      value: 
+      objectReference: {fileID: 1099321359}
     - target: {fileID: 6248408906460309136, guid: ec98f932d9bc20743b67fd5e3e0c5008, type: 3}
       propertyPath: m_Pivot.x
       value: 0

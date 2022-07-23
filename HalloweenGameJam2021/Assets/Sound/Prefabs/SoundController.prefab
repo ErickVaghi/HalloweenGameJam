@@ -51,13 +51,6 @@ MonoBehaviour:
       Data3: -1695215735
       Data4: 1756923412
     Path: event:/Checkpoint
-  DashRef:
-    Guid:
-      Data1: 627392189
-      Data2: 1116461184
-      Data3: 224752825
-      Data4: -1251003999
-    Path: event:/Dash
   DeathRef:
     Guid:
       Data1: 513243230
@@ -65,3 +58,24 @@ MonoBehaviour:
       Data3: 1303903899
       Data4: 1993460009
     Path: event:/Death
+  PickupCardRef:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  ReviveRef:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  PauseAudioRef:
+    Guid:
+      Data1: -1041908284
+      Data2: 1084262024
+      Data3: 523188360
+      Data4: -918230199
+    Path: snapshot:/PausemenuFilter
