@@ -11,6 +11,7 @@ public class WinLevel : MonoBehaviour
     [SerializeField] private int MaxCards;
     [SerializeField] public static int cardsToWin;
     [SerializeField] private Animator sceneTransition;
+    [SerializeField] private GameObject SceneTransitionHolder;
 
     private void Awake()
     {
@@ -18,6 +19,7 @@ public class WinLevel : MonoBehaviour
         count = 0;
         cardsToWin = 0;
         sceneTransition = GameObject.FindWithTag("Scene_Transition").GetComponent<Animator>();
+        SceneTransitionHolder = GameObject.FindWithTag("Scene_Transition");
     }
 
     private void Start()
@@ -33,6 +35,7 @@ public class WinLevel : MonoBehaviour
         count = cardCounter;
         if (cardCounter >= cardsToWin)
         {
+            SceneTransitionHolder.SetActive(true);
             sceneTransition.Play("Scene_Transition_Enter");
         }
     }

@@ -19,4 +19,14 @@ public class SceneLoader : MonoBehaviour
         WinLevel.cardCounter = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
     }
+
+    public void DisableTransition()
+    {
+        gameObject.SetActive(false);
+    }
+    
+    public void LoadFirstLevel()
+    {
+        SceneManager.LoadScene("LEVEL_1"); 
+    }
 }

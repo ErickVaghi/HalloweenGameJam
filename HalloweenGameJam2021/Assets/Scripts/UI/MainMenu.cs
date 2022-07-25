@@ -15,6 +15,12 @@ public class MainMenu : MonoBehaviour
         SceneAnimator.Play("Scene_Transition_Enter");
     }
     
+    public void PlayGameAgain()
+    {
+        SceneTransition.SetActive(true);
+        SceneAnimator.Play("Scene_Transition_Enter_End_Scene");
+    }
+    
     public void Quit()
     {
         Application.Quit();
@@ -24,4 +30,5 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
     }
+    
 }
