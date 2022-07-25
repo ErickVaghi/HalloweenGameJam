@@ -8,12 +8,15 @@ public class PauseMenu : MonoBehaviour
     public SoundController sc;
 
     public static bool GameIsPaused = false;
-    [SerializeField] private GameObject PauseGameUI;
+    [SerializeField] private GameObject pauseGameUI;
+    [SerializeField] private bool audioOn = true;
+    [SerializeField] private GameObject audioOnButton;
+    [SerializeField] private GameObject audioOffButton;
 
     private void Awake()
     {
-        PauseGameUI = GameObject.Find("Pause Menu");
-        PauseGameUI.SetActive(false);
+        pauseGameUI = GameObject.Find("Pause Menu");
+        pauseGameUI.SetActive(false);
     }
 
     void Update()
@@ -33,7 +36,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        PauseGameUI.SetActive(false);
+        pauseGameUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
         sc.PauseAudioStop();
@@ -41,8 +44,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
-        PauseGameUI.SetActive(true);
-        PauseGameUI.SetActive(true);
+        pauseGameUI.SetActive(true);
+        pauseGameUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
         sc.PauseAudio();
@@ -52,5 +55,21 @@ public class PauseMenu : MonoBehaviour
     {
         //Debug.Log("Quitting Game");
         Application.Quit();
+    }
+
+    public void SwitchAudio()
+    {
+        if (audioOn)
+        {
+            audioOn = false;
+            audioOnButton.SetActive(false);
+            audioOffButton.SetActive(true);
+        }
+        else
+        {
+            audioOn = true;
+            audioOnButton.SetActive(true);
+            audioOffButton.SetActive(false);
+        }
     }
 }

@@ -7,7 +7,9 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] private Animator SceneAnimator;
     [SerializeField] private GameObject SceneTransition;
-    
+    [SerializeField] private bool audioOn = true;
+    [SerializeField] private GameObject audioOnButton;
+    [SerializeField] private GameObject audioOffButton;
   
     public void Play()
     {
@@ -29,6 +31,22 @@ public class MainMenu : MonoBehaviour
     public void LoadNextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
+    }
+    
+    public void SwitchAudio()
+    {
+        if (audioOn)
+        {
+            audioOn = false;
+            audioOnButton.SetActive(false);
+            audioOffButton.SetActive(true);
+        }
+        else
+        {
+            audioOn = true;
+            audioOnButton.SetActive(true);
+            audioOffButton.SetActive(false);
+        }
     }
     
 }
