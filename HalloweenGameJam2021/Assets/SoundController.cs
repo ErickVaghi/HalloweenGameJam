@@ -23,6 +23,10 @@ public class SoundController : MonoBehaviour
     public FMODUnity.EventReference PauseAudioRef;
     private FMOD.Studio.EventInstance PauseAudioInst;
 
+    public FMODUnity.EventReference MuteMusicRef;
+    private FMOD.Studio.EventInstance MuteMusicInst;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -69,5 +73,17 @@ public class SoundController : MonoBehaviour
     public void PauseAudioStop()
     {
         PauseAudioInst.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+    public void MuteMusic()
+    {
+        MuteMusicInst = FMODUnity.RuntimeManager.CreateInstance(MuteMusicRef);
+        MuteMusicInst.start();
+        Debug.Log("MuteMusic");
+    }
+    public void MuteMusicStop()
+    {
+
+        MuteMusicInst.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        Debug.Log("UnMuteMusic");
     }
 }

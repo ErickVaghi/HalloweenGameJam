@@ -10,6 +10,7 @@ public class MusicProgress : MonoBehaviour
     {
         if(collision.tag == ("Player"))
         {
+           
             Debug.Log("MusicProgressChange");
             mc.changeMusicProgress(ProgressLvl);
         }
