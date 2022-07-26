@@ -26,10 +26,12 @@ public class PauseMenu : MonoBehaviour
             if (GameIsPaused)
             {
                 Resume();
+                sc.PauseAudioStop();
             }
             else
             {
-                Pause();
+                Pause();               
+                sc.PauseAudio();
             }
         }
     }
@@ -39,7 +41,7 @@ public class PauseMenu : MonoBehaviour
         pauseGameUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
-        sc.PauseAudioStop();
+        
     }
 
     public void Pause()
@@ -48,7 +50,7 @@ public class PauseMenu : MonoBehaviour
         pauseGameUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
-        sc.PauseAudio();
+        
     }
 
     public void Quit()
@@ -64,7 +66,6 @@ public class PauseMenu : MonoBehaviour
             //music off
             audioOn = false;
             sc.MuteMusic();
-            sc.PauseAudioStop();
             audioOnButton.SetActive(false);
             audioOffButton.SetActive(true);
 
@@ -73,7 +74,6 @@ public class PauseMenu : MonoBehaviour
         {
             //music on
             audioOn = true;
-            sc.PauseAudio();
             sc.MuteMusicStop();
             audioOnButton.SetActive(true);
             audioOffButton.SetActive(false);
