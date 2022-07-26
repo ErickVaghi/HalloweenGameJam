@@ -723,6 +723,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 835415918986784862, guid: bff4607dbb9d23240ad8b611222ccc92, type: 3}
+      propertyPath: sc
+      value: 
+      objectReference: {fileID: 1156787123}
     - target: {fileID: 1022107957276260084, guid: bff4607dbb9d23240ad8b611222ccc92, type: 3}
       propertyPath: m_Name
       value: Pause Canvas
@@ -992,7 +996,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5676424608611245405, guid: 56f48a8c0dde2b14da720c4182749c23, type: 3}
   m_PrefabInstance: {fileID: 464602222}
   m_PrefabAsset: {fileID: 0}
---- !u!43 &584481084
+--- !u!43 &574442488
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9193,8 +9197,8 @@ MonoBehaviour:
   - {x: 17.993876, y: -4.9995513, z: 0}
   - {x: 18.014631, y: 1.0032704, z: 0}
   m_ShapePathHash: 169395623
-  m_Mesh: {fileID: 584481084}
-  m_InstanceId: 188596
+  m_Mesh: {fileID: 574442488}
+  m_InstanceId: 96500
 --- !u!1 &1007407600
 GameObject:
   m_ObjectHideFlags: 0
@@ -10126,6 +10130,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.076006, y: 2.5572648}
   m_EdgeRadius: 0
+--- !u!1 &1398873846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1022107957276260084, guid: bff4607dbb9d23240ad8b611222ccc92, type: 3}
+  m_PrefabInstance: {fileID: 406610810}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1398873852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398873846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b2c8b5fdcca7248a5bb0bf42f86bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1445772533
 GameObject:
   m_ObjectHideFlags: 0
