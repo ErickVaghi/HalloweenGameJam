@@ -17,7 +17,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseGameUI = GameObject.Find("Pause Menu");
         pauseGameUI.SetActive(false);
-        sc = GameObject.FindGameObjectWithTag("Sound").GetComponent<SoundController>();
+        //sc = GameObject.FindGameObjectWithTag("Sound").GetComponent<SoundController>();
     }
 
     void Update()

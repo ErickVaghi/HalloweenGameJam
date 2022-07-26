@@ -19,9 +19,6 @@ public class MusicProgress : MonoBehaviour
 
         }
     }
-    private void Start()
-    {
-        DontDestroyOnLoad(this.gameObject);
-    }
+
 
 }
