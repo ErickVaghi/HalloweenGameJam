@@ -137,7 +137,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8490613398544166946}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 0.97, z: 0}
+  m_LocalPosition: {x: -0.01, y: 0.858, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -362,6 +362,7 @@ MonoBehaviour:
   checkPointActive: 0
   newRespawn: {fileID: 5003921878334400393}
   myDeathTimer: {fileID: 0}
+  sc: {fileID: 0}
 --- !u!1001 &8490613399821345526
 PrefabInstance:
   m_ObjectHideFlags: 0

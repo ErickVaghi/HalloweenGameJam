@@ -5,19 +5,17 @@ using UnityEngine;
 
 public class ControlSwitch : MonoBehaviour
 {
+    [SerializeField] private GameObject player;
     [SerializeField] private InputController myInputController;
     private void Awake()
     {
-        myInputController = gameObject.GetComponent<InputController>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        myInputController = player.GetComponent<InputController>();
     }
-
-    void Update()
+    
+    public void TurnOnControls()
     {
-        
-    }
-
-    public void TurnOnControlls()
-    {
+        //player.GetComponent<InputController>().enabled = true;
         myInputController.enabled = true;
     }
 }

@@ -55,6 +55,8 @@ public class TrapTrigger : MonoBehaviour
             //currentPosition.position = player.transform.position;
             myInputController.MoveInput = 0f;
             commandContainer.moveCommand = 0f;
+            myInputController.FlyInput = false;
+            commandContainer.flyCommand = false;
             myInputController.enabled = false;
             playerRigidBody.velocity = Vector2.zero;
 

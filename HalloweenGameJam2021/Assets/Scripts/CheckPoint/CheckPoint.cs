@@ -8,14 +8,14 @@ public class CheckPoint : MonoBehaviour
     [SerializeField] private Animator CpAnimation;
     public bool checkPointActive;
     public Transform newRespawn;
-    [SerializeField] private DeathTimer myDeathTimer;
+    //[SerializeField] private DeathTimer myDeathTimer;
 
     public SoundController sc;
 
     private void Awake()
     {
         newRespawn = gameObject.GetComponent<Transform>();
-        myDeathTimer = GameObject.FindWithTag("Trap").GetComponent<DeathTimer>();
+        //myDeathTimer = GameObject.FindWithTag("Trap").GetComponent<DeathTimer>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -24,7 +24,8 @@ public class CheckPoint : MonoBehaviour
         {
             CpAnimation.SetTrigger("Checkpoint");
             checkPointActive = true;
-            myDeathTimer.respawn.position = newRespawn.position;
+            Respawn.respawn.position = newRespawn.position;
+            //myDeathTimer.respawn.position = newRespawn.position;
             sc.ChekpointAudio();
         }
     }

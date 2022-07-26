@@ -16,7 +16,7 @@ public class Respawn : MonoBehaviour
     [SerializeField] private CommandContainer commandContainer;
     
     [Header("Respawn")]
-    public Transform respawn;
+    public static Transform respawn;
     
     [Header("UI")]
     [SerializeField] private Animator transition;
