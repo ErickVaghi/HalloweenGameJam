@@ -12,6 +12,9 @@ public class WinLevel : MonoBehaviour
     [SerializeField] public static int cardsToWin;
     [SerializeField] private Animator sceneTransition;
     [SerializeField] private GameObject SceneTransitionHolder;
+    
+    [SerializeField] private GameObject player;
+    [SerializeField] private InputController myInputController;
 
     private void Awake()
     {
@@ -20,6 +23,9 @@ public class WinLevel : MonoBehaviour
         cardsToWin = 0;
         sceneTransition = GameObject.FindWithTag("Scene_Transition").GetComponent<Animator>();
         SceneTransitionHolder = GameObject.FindWithTag("Scene_Transition");
+        
+        player = GameObject.FindGameObjectWithTag("Player");
+        myInputController = player.GetComponent<InputController>();
     }
 
     private void Start()
@@ -35,7 +41,10 @@ public class WinLevel : MonoBehaviour
         count = cardCounter;
         if (cardCounter >= cardsToWin)
         {
-            SceneTransitionHolder.SetActive(true);
+            myInputController.MoveInput = 0f;
+            myInputController.FlyInput = false;
+            player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+;           SceneTransitionHolder.SetActive(true);
             sceneTransition.Play("Scene_Transition_Enter");
         }
     }

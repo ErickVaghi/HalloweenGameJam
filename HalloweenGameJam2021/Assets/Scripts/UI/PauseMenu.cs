@@ -63,20 +63,23 @@ public class PauseMenu : MonoBehaviour
     {
         if (audioOn)
         {
+            audioOnButton.SetActive(false);
+            audioOffButton.SetActive(true);
+            
             //music off
             audioOn = false;
             sc.MuteMusic();
-            audioOnButton.SetActive(false);
-            audioOffButton.SetActive(true);
-
+            
         }
         else
         {
+            audioOnButton.SetActive(true);
+            audioOffButton.SetActive(false);
+            
             //music on
             audioOn = true;
             sc.MuteMusicStop();
-            audioOnButton.SetActive(true);
-            audioOffButton.SetActive(false);
+            
         }
     }
 }

@@ -383,7 +383,6 @@ GameObject:
   - component: {fileID: 6248408906460309149}
   - component: {fileID: 6248408906460309150}
   - component: {fileID: 6248408906460309151}
-  - component: {fileID: 1065876562}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -475,23 +474,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1065876562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6248408906460309137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 543a016f9cff6ad4b98d0bd889ccf0f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sc: {fileID: 0}
-  pauseGameUI: {fileID: 0}
-  audioOn: 1
-  audioOnButton: {fileID: 0}
-  audioOffButton: {fileID: 0}
 --- !u!1 &6248408907171134335
 GameObject:
   m_ObjectHideFlags: 0
