@@ -19253,8 +19253,28 @@ PrefabInstance:
       value: -11.82
       objectReference: {fileID: 0}
     - target: {fileID: 6484403838461790861, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
+      propertyPath: MuteMusicRef.Path
+      value: snapshot:/MuteMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484403838461790861, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: PauseAudioRef.Path
       value: snapshot:/PausemenuFilter
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484403838461790861, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
+      propertyPath: MuteMusicRef.Guid.Data1
+      value: -96725036
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484403838461790861, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
+      propertyPath: MuteMusicRef.Guid.Data2
+      value: 1336852598
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484403838461790861, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
+      propertyPath: MuteMusicRef.Guid.Data3
+      value: -746953316
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484403838461790861, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
+      propertyPath: MuteMusicRef.Guid.Data4
+      value: -907868376
       objectReference: {fileID: 0}
     - target: {fileID: 6484403838461790861, guid: 44dae29c6c39be341a62b78519603f79, type: 3}
       propertyPath: PauseAudioRef.Guid.Data1
