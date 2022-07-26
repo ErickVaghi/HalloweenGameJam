@@ -7,7 +7,7 @@ public class DeathTimer : MonoBehaviour
     [Header("Trap's Components")]
     [SerializeField] private Light2D myLight2D;
     [SerializeField] private TrapTrigger myTrapTrigger;
-    
+
     [Header("Death Timer")]
     [SerializeField] private float deathTimeCounter;
     [SerializeField] private float deathTime = 10f;
@@ -71,6 +71,7 @@ public class DeathTimer : MonoBehaviour
         {
             
             playerAnimator.ResetTrigger("Dead");
+            playerAnimator.ResetTrigger("DeadByKids");
             playerAnimator.SetTrigger("Alive");
             
             transition.ResetTrigger("Transition");

@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 4184109809238283811}
   - component: {fileID: 4184109809238283813}
   - component: {fileID: 4184109809238283814}
-  - component: {fileID: 4184109809238283815}
-  - component: {fileID: 4184109809238283812}
   - component: {fileID: 4184109809238283817}
+  - component: {fileID: 3907687430513965814}
   - component: {fileID: 4184109809238283816}
   m_Layer: 0
   m_Name: Kid
@@ -187,49 +186,6 @@ MonoBehaviour:
   m_ShapePathHash: -1604054145
   m_Mesh: {fileID: 0}
   m_InstanceId: 40744
---- !u!114 &4184109809238283815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4184109809238283806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 516c0b33fa2d4ef4bbb8596c511b8659, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myLight2D: {fileID: 0}
-  deathTimer: {fileID: 0}
-  myInputController: {fileID: 0}
-  player: {fileID: 0}
-  playerAnimator: {fileID: 0}
-  commandContainer: {fileID: 0}
-  transition: {fileID: 0}
-  isDead: 0
---- !u!114 &4184109809238283812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4184109809238283806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 547aab2a64d6f3f49b50aee10cfc0acc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myLight2D: {fileID: 0}
-  myTrapTrigger: {fileID: 0}
-  deathTimeCounter: 0
-  deathTime: 0.8
-  player: {fileID: 0}
-  playerInputController: {fileID: 0}
-  playerRigidBody: {fileID: 0}
-  playerAnimator: {fileID: 0}
-  transition: {fileID: 0}
-  respawn: {fileID: 0}
-  sc: {fileID: 0}
 --- !u!114 &4184109809238283817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +198,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205fa959685084d43864cd6741fa6237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3907687430513965814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4184109809238283806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 287829595d676914cb42fda706df1aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myLight2D: {fileID: 4184109810302954463}
+  myInputController: {fileID: 5676424608611245392, guid: 56f48a8c0dde2b14da720c4182749c23, type: 3}
+  player: {fileID: 5676424608611245393, guid: 56f48a8c0dde2b14da720c4182749c23, type: 3}
+  playerAnimator: {fileID: 174057829, guid: 56f48a8c0dde2b14da720c4182749c23, type: 3}
+  playerRigidBody: {fileID: 0}
+  commandContainer: {fileID: 5676424608611245407, guid: 56f48a8c0dde2b14da720c4182749c23, type: 3}
+  respawn: {fileID: 0}
+  transition: {fileID: 0}
 --- !u!114 &4184109809238283816
 MonoBehaviour:
   m_ObjectHideFlags: 0
