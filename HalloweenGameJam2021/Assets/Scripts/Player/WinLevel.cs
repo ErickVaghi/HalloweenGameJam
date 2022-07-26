@@ -15,6 +15,7 @@ public class WinLevel : MonoBehaviour
     
     [SerializeField] private GameObject player;
     [SerializeField] private InputController myInputController;
+    [SerializeField] private Rigidbody2D rb; 
 
     private void Awake()
     {
@@ -26,6 +27,7 @@ public class WinLevel : MonoBehaviour
         
         player = GameObject.FindGameObjectWithTag("Player");
         myInputController = player.GetComponent<InputController>();
+        rb = player.GetComponent<Rigidbody2D>();
     }
 
     private void Start()
@@ -34,8 +36,6 @@ public class WinLevel : MonoBehaviour
         count = 0;
         cardsToWin = 0;
         cardsToWin = MaxCards;
-        
-        player.GetComponent<Rigidbody2D>().gravityScale = 1f;
     }
 
     private void Update()
@@ -46,8 +46,8 @@ public class WinLevel : MonoBehaviour
             myInputController.MoveInput = 0f;
             myInputController.FlyInput = false;
             player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            player.GetComponent<Rigidbody2D>().gravityScale = 0f;
-;           SceneTransitionHolder.SetActive(true);
+            rb.constraints = RigidbodyConstraints2D.FreezePosition;
+            SceneTransitionHolder.SetActive(true);
             sceneTransition.Play("Scene_Transition_Enter");
         }
     }
