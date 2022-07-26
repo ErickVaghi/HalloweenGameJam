@@ -9,6 +9,7 @@ TagManager:
   - Transition
   - Scene_Transition
   - Trap
+  - Sound
   layers:
   - Default
   - TransparentFX

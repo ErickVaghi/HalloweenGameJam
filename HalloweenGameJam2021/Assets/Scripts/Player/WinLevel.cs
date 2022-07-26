@@ -34,6 +34,8 @@ public class WinLevel : MonoBehaviour
         count = 0;
         cardsToWin = 0;
         cardsToWin = MaxCards;
+        
+        player.GetComponent<Rigidbody2D>().gravityScale = 1f;
     }
 
     private void Update()
@@ -44,6 +46,7 @@ public class WinLevel : MonoBehaviour
             myInputController.MoveInput = 0f;
             myInputController.FlyInput = false;
             player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            player.GetComponent<Rigidbody2D>().gravityScale = 0f;
 ;           SceneTransitionHolder.SetActive(true);
             sceneTransition.Play("Scene_Transition_Enter");
         }
