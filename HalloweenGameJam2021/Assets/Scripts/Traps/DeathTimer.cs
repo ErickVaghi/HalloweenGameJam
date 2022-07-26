@@ -67,7 +67,7 @@ public class DeathTimer : MonoBehaviour
         playerRigidBody.velocity = Vector2.zero;
         deathTimeCounter -= Time.deltaTime;
         //player.transform.position = myTrapTrigger.currentPosition.position;
-        if (deathTimeCounter < 0 && myTrapTrigger.isDead)
+        if (deathTimeCounter < 0 && Respawn.isDead)
         {
             
             playerAnimator.ResetTrigger("Dead");
@@ -81,7 +81,7 @@ public class DeathTimer : MonoBehaviour
             //player.GetComponent<SpriteRenderer>().enabled = true;
             player.GetComponent<Collider2D>().enabled = true;
             myLight2D.enabled = true;
-            myTrapTrigger.isDead = false;
+            Respawn.isDead = false;
             playerRigidBody.velocity = Vector2.zero;
             playerInputController.enabled = true;
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

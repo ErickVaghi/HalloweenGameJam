@@ -49,6 +49,6 @@ public class Respawn : MonoBehaviour
         myLight2D.enabled = true;
         isDead = false;
         playerRigidBody.velocity = Vector2.zero;
-        myInputController.enabled = true;
+        //myInputController.enabled = true;
     }
 }
