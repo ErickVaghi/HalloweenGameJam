@@ -27,7 +27,7 @@ public class PauseMenu : MonoBehaviour
             if (GameIsPaused)
             {
                 Resume();
-                sc.PauseAudioStop();
+                //sc.PauseAudioStop();
             }
             else
             {
@@ -42,7 +42,8 @@ public class PauseMenu : MonoBehaviour
         pauseGameUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
-        
+        sc.PauseAudioStop();  //testing filter
+
     }
 
     public void Pause()
